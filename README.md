@@ -42,7 +42,6 @@ class TestModel(BaseModel):
         super(TestModel, self).__init__()
     
     def find_phone(self):
-        phone = "11111"
         # 查找过滤，可以链式调用
         self.dml.eq("phone", "1111").lt("time", 1111).limit(10)
         self.dml.find(["phone", "code"], self._find_phone_cb)
@@ -83,6 +82,8 @@ class TestModel(BaseModel):
 * 写表的字段以及类型，`__fields__`
 * 这样类可以使用 `self.dml`实例，这是一个DML实例，可以通过此实例进行Mysql的各种相关的操作，可以看看此类的源码了解更多
 * 另外，如果有比较复杂的sql语句，没有接口可以满足，可以使用`execute_custom_sql`函数
+
+在kbengine中使用，就将`dbs`目录拷贝到`server_common`下面即可
 
 # 完善与改进
 
