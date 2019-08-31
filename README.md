@@ -1,5 +1,5 @@
 # kbengine-orm
-mysql orm for kbengine
+mysql orm for [kbengine](https://github.com/kbengine/kbengine)
 
 对kbegnine中的mysql操作，简单做了一下ORM封装
 
